@@ -46,13 +46,14 @@ header{background:#dfe1e0ed;backdrop-filter:blur(14px)}nav{font-family:Mont,Aria
 @media(prefers-reduced-motion:reduce){.name-contacts a{animation:none}}
 </style>
 <style id="skills-ledger-polish">
+.scroll-cue,.chapter{display:none!important}
 .skills.skills-scene{--skills-paper:#dfe1e0;--skills-section:#d3d5d4;--skills-card:rgba(226,228,227,.84);--skills-copy:#555d59;--skills-ink:#202322;--skills-gold:#a9894f;position:relative;isolation:isolate;padding:122px 7vw 128px;overflow:hidden;color:var(--skills-ink);background:linear-gradient(180deg,var(--skills-paper) 0%,var(--skills-section) 15%,var(--skills-section) 85%,var(--skills-paper) 100%);border:0}
 .skills-cloud{position:absolute;z-index:-1;width:82%;height:68%;left:9%;top:16%;pointer-events:none;will-change:transform;filter:blur(42px);border-radius:48% 52% 57% 43%/54% 44% 56% 46%;background:radial-gradient(ellipse at 34% 42%,rgba(237,239,238,.78),transparent 44%),radial-gradient(ellipse at 67% 59%,rgba(190,192,191,.42),transparent 58%)}
-.skills-shell{position:relative;z-index:2;width:min(100%,1440px);margin:0 auto}
-.skills-heading{margin:0 0 48px;font-family:Share,Arial,sans-serif;font-size:clamp(29px,3.2vw,44px);font-weight:400;line-height:1;letter-spacing:.12em;color:var(--skills-ink);opacity:0;transform:translateY(12px);transition:opacity .65s ease,transform .7s cubic-bezier(.2,.75,.25,1)}
+.skills-shell{position:relative;z-index:2;width:min(100%,1240px);margin:0 auto}
+.skills-heading{margin:0 0 48px;font-family:Nas,Arial,sans-serif;font-size:clamp(16.32px,2.304vw,35.52px);font-weight:400;line-height:1.05;letter-spacing:-.03em;color:var(--skills-ink);opacity:0;transform:translateY(12px);transition:opacity .65s ease,transform .7s cubic-bezier(.2,.75,.25,1)}
 .skills-heading:after{content:"";display:inline-block;width:68px;height:1px;margin:0 0 .25em 25px;background:var(--skills-gold);transform:scaleX(0);transform-origin:left;transition:transform .8s .15s cubic-bezier(.2,.75,.25,1)}
-.skills-scene .skill-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%;max-width:none;margin:0;padding:0;gap:20px;list-style:none}
-.skills-scene .skill-grid li{--delay:0ms;position:relative;display:flex;flex-direction:column;min-width:0;min-height:230px;margin:0;padding:27px 26px 24px;border:1px solid rgba(255,255,255,.42);border-radius:22px;background:var(--skills-card);box-shadow:0 18px 38px -31px rgba(48,54,51,.45),inset 0 1px rgba(255,255,255,.34);color:var(--skills-ink);font-family:Mont,Arial,sans-serif;opacity:0;transition:opacity .62s calc(var(--delay) + .12s) ease,box-shadow .35s ease;will-change:transform}
+.skills-scene .skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;max-width:none;margin:0;padding:0;gap:22px 24px;list-style:none}
+.skills-scene .skill-grid li{--delay:0ms;position:relative;display:grid;grid-template-columns:minmax(165px,.82fr) minmax(0,1.18fr);align-items:center;gap:24px;min-width:0;min-height:172px;margin:0;padding:25px 27px;border:1px solid rgba(255,255,255,.42);border-radius:22px;background:var(--skills-card);box-shadow:0 18px 38px -31px rgba(48,54,51,.45),inset 0 1px rgba(255,255,255,.34);color:var(--skills-ink);font-family:Mont,Arial,sans-serif;opacity:0;transition:opacity .62s calc(var(--delay) + .12s) ease,box-shadow .35s ease;will-change:transform}
 .skills-scene .skill-grid li:nth-child(1){--x1:-8.1px;--y1:4.5px;--r1:-.25deg;--x2:9.9px;--y2:-6.3px;--r2:.22deg;--duration:7.9s;--drift-delay:-2.1s}
 .skills-scene .skill-grid li:nth-child(2){--x1:9px;--y1:-4.5px;--r1:.20deg;--x2:-8.1px;--y2:8.1px;--r2:-.28deg;--duration:7s;--drift-delay:-4.3s}
 .skills-scene .skill-grid li:nth-child(3){--x1:-5.4px;--y1:-9px;--r1:.24deg;--x2:10.8px;--y2:4.5px;--r2:-.21deg;--duration:8.8s;--drift-delay:-1.2s}
@@ -61,28 +62,31 @@ header{background:#dfe1e0ed;backdrop-filter:blur(14px)}nav{font-family:Mont,Aria
 .skills-scene .skill-grid li:nth-child(6){--x1:5.4px;--y1:-7.2px;--r1:.27deg;--x2:-9px;--y2:7.2px;--r2:-.19deg;--duration:7.7s;--drift-delay:-5.8s}
 .skills-scene.is-entered .skill-grid li{opacity:1;animation:skills-card-drift var(--duration) cubic-bezier(.45,.05,.55,.95) var(--drift-delay) infinite alternate}
 @keyframes skills-card-drift{from{transform:translate3d(var(--x1),var(--y1),0) rotate(var(--r1))}to{transform:translate3d(var(--x2),var(--y2),0) rotate(var(--r2))}}
-.skills-scene .skill-grid li:hover{padding:27px 26px 24px;box-shadow:0 22px 42px -29px rgba(48,54,51,.52),inset 0 1px rgba(255,255,255,.38)}
-.skills-scene .skill-head{display:block;margin:0 0 22px}
-.skills-scene .skill-icon{display:grid;width:34px;height:34px;margin:0 0 25px;place-items:center;color:var(--skills-gold)}
+.skills-scene .skill-grid li:hover{padding:25px 27px;box-shadow:0 22px 42px -29px rgba(48,54,51,.52),inset 0 1px rgba(255,255,255,.38)}
+.skills-scene .skill-head{display:grid;grid-template-columns:38px minmax(0,1fr);align-items:center;gap:16px;margin:0}
+.skills-scene .skill-icon{display:grid;width:34px;height:34px;margin:0;place-items:center;color:var(--skills-gold)}
 .skills-scene .skill-icon svg{display:block;width:34px;height:34px;overflow:visible;fill:none;stroke:currentColor;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round}
 .skills-scene .skill-icon svg :is(path,circle,line,polyline){stroke-dasharray:95;stroke-dashoffset:95;transition:stroke-dashoffset .9s calc(var(--delay) + .22s) cubic-bezier(.2,.75,.25,1)}
 .skills-scene h3{margin:0;font-family:Share,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.28;letter-spacing:.09em;text-transform:uppercase;color:#2b302e}
-.skills-scene .skill-grid p{max-width:35ch;margin:auto 0 0;font-family:Mont,Arial,sans-serif;font-size:13px;font-weight:400;line-height:1.58;color:var(--skills-copy)}
+.skills-scene .skill-grid p{max-width:none;margin:0;padding-left:24px;border-left:1px solid rgba(32,35,34,.12);font-family:Mont,Arial,sans-serif;font-size:13px;font-weight:400;line-height:1.58;color:var(--skills-copy)}
 .skills-scene .skill-grid li:after{display:none}
 .skills-scene.is-entered .skills-heading{opacity:1;transform:none}
 .skills-scene.is-entered .skills-heading:after{transform:scaleX(1)}
 .skills-scene.is-entered .skill-icon svg :is(path,circle,line,polyline){stroke-dashoffset:0}
-@media(max-width:1050px){.skills.skills-scene{padding:112px 6vw 118px}.skills-scene .skill-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.skills-scene .skill-grid li{min-height:220px}}
-@media(max-width:650px){.skills.skills-scene{padding:92px 24px 98px}.skills-cloud{width:155%;height:76%;left:-28%;top:12%}.skills-heading{margin-bottom:36px;font-size:27px;letter-spacing:.1em}.skills-heading:after{width:38px;margin-left:13px}.skills-scene .skill-grid{grid-template-columns:1fr;gap:18px}.skills-scene .skill-grid li{min-height:205px;padding:25px 24px 23px}.skills-scene .skill-grid li:hover{padding:25px 24px 23px}.skills-scene .skill-head{margin-bottom:18px}.skills-scene .skill-icon{margin-bottom:21px}.skills-scene h3{font-size:16px}.skills-scene .skill-grid p{font-size:13px;line-height:1.56}}
+@media(max-width:1050px){.skills.skills-scene{padding:102px 6vw 108px}.skills-scene .skill-grid li{grid-template-columns:1fr;align-content:start;gap:17px;min-height:184px;padding:23px 24px}.skills-scene .skill-grid li:hover{padding:23px 24px}.skills-scene .skill-grid p{padding:16px 0 0;border-left:0;border-top:1px solid rgba(32,35,34,.1)}}
+@media(max-width:650px){.skills.skills-scene{padding:72px 20px 82px}.skills-cloud{width:155%;height:76%;left:-28%;top:12%}.skills-heading{margin-bottom:30px;font-size:clamp(17.5px,4.83vw,29.4px);letter-spacing:-.03em;white-space:nowrap}.skills-heading:after{width:32px;margin-left:11px}.skills-scene .skill-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.skills-scene .skill-grid li{gap:14px;min-height:0;padding:19px 17px 18px;border-radius:18px}.skills-scene .skill-grid li:hover{padding:19px 17px 18px}.skills-scene .skill-head{grid-template-columns:31px minmax(0,1fr);gap:11px}.skills-scene .skill-icon,.skills-scene .skill-icon svg{width:29px;height:29px}.skills-scene h3{font-size:14px;line-height:1.3;letter-spacing:.07em}.skills-scene .skill-grid p{padding-top:13px;font-size:12px;line-height:1.5}}
+@media(max-width:430px){.skills.skills-scene{padding-left:18px;padding-right:18px}.skills-scene .skill-grid{grid-template-columns:1fr;gap:14px}.skills-scene .skill-grid li{grid-template-columns:150px minmax(0,1fr);align-items:center;min-height:132px;padding:20px}.skills-scene .skill-grid li:hover{padding:20px}.skills-scene .skill-grid p{padding:0 0 0 18px;border-top:0;border-left:1px solid rgba(32,35,34,.1);font-size:12.5px}}
+@media(max-width:360px){.skills-heading{font-size:4.69vw}}
 @media(prefers-reduced-motion:reduce){.skills-heading,.skills-heading:after,.skills-scene .skill-grid li,.skills-scene .skill-icon svg :is(path,circle,line,polyline){opacity:1;transform:none!important;transition:none;animation:none!important;stroke-dashoffset:0}.skills-cloud{transform:none!important}}
 </style>
 <script id="skills-scene-build">
 document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.scroll-cue,.chapter').forEach(el=>el.remove());
   const section=document.querySelector('.skills');
   if(!section)return;
   section.classList.add('skills-scene');
   section.setAttribute('aria-labelledby','skills-title');
-  section.innerHTML=`<div class="skills-cloud" aria-hidden="true"></div><div class="skills-shell"><h2 class="skills-heading" id="skills-title">МОИ КОМПЕТЕНЦИИ</h2><ul class="skill-grid">
+  section.innerHTML=`<div class="skills-cloud" aria-hidden="true"></div><div class="skills-shell"><h2 class="skills-heading" id="skills-title">КОМПЕТЕНЦИИ</h2><ul class="skill-grid">
     <li style="--delay:0ms"><div class="skill-head"><span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="5"/><path d="M24 6v8M24 34v8M6 24h8M34 24h8M34 14l-7 7-8 3 3-8 7-7"/></svg></span><h3>Продуктовая<br>стратегия</h3></div><p>Определяю цели, клиентские сценарии и приоритеты. Связываю roadmap с задачами бизнеса.</p></li>
     <li style="--delay:90ms"><div class="skill-head"><span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 39V10M8 39h33M14 31l8-9 7 5 11-14"/><circle cx="14" cy="31" r="2"/><circle cx="22" cy="22" r="2"/><circle cx="29" cy="27" r="2"/><circle cx="40" cy="13" r="2"/></svg></span><h3>Метрики и<br>дашборды</h3></div><p>Выстраиваю систему контроля результата. Анализирую данные и нахожу зоны роста.</p></li>
     <li style="--delay:180ms"><div class="skill-head"><span class="skill-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="19" cy="19" r="12"/><path d="M19 7v12h12M12 30c0 4 7 7 15 7s15-3 15-7M12 36c0 4 7 7 15 7s15-3 15-7V24"/></svg></span><h3>Экономика<br>продукта</h3></div><p>Строю финансовые модели, оцениваю ROI и управляю бюджетом продуктового портфеля.</p></li>
