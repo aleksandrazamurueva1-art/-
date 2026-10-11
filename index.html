@@ -141,9 +141,18 @@ html{scroll-padding-top:92px}
 @media(max-width:430px){.skills.skills-scene{padding-left:14px;padding-right:14px}.skills-scene .skill-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.skills-scene .skill-grid li{grid-template-columns:1fr;align-content:start;padding:14px 11px}.skills-scene .skill-grid li:hover{padding:14px 11px}.skills-scene .skill-head{grid-template-columns:23px minmax(0,1fr);gap:7px}.skills-scene .skill-icon,.skills-scene .skill-icon svg{width:22px;height:22px}.skills-scene h3{font-size:10.8px}.skills-scene .skill-grid p{padding:10px 0 0;border-left:0;border-top:1px solid rgba(32,35,34,.1);font-size:10px}}
 @media(prefers-reduced-motion:reduce){.hero-cta,.hero-cta:after{transition:none}}
 </style>
+<style id="hero-variant-b-release">
+.hero-bottom{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:0;max-width:1020px}
+.hero-metrics{display:contents}
+.hero-cta{align-self:stretch;min-height:auto;padding:17px 20px;border:0;border-left:1px solid rgba(32,35,34,.18);border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;color:#414b46;font-size:12px;line-height:1.45;white-space:normal}
+.hero-cta:hover{background:rgba(255,255,255,.18);box-shadow:none;transform:none}
+@media(max-width:900px){.intro{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;min-height:100svh;padding:104px 40px 118px;gap:26px}.portrait{order:-1;position:relative;align-self:center;top:auto;right:auto;bottom:auto;width:auto;height:clamp(250px,36svh,340px);max-width:min(72vw,360px);max-height:none;object-fit:contain}.intro-copy{align-self:stretch;width:100%}.intro h1{font-size:clamp(34px,7.1vw,58px)}.intro h1 .name-line{justify-content:space-between;gap:18px}.specialization{max-width:520px}.hero-summary{align-self:stretch;width:100%;max-width:100%;margin-top:8px}.hero-lead{max-width:640px;font-size:clamp(21px,3.4vw,27px)}.hero-bottom{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:0;max-width:100%;margin-top:34px}.hero-metrics{display:contents}.hero-cta{grid-column:auto;align-self:stretch;width:auto;min-height:auto;padding:14px 13px;border:0;border-left:1px solid rgba(32,35,34,.18);border-radius:0;background:transparent;box-shadow:none;font-size:11px;line-height:1.42}}
+@media(max-width:520px){.intro{justify-content:flex-start;padding:92px 20px 112px;gap:22px}.portrait{height:min(245px,30svh);max-width:78vw}.intro h1{font-size:clamp(27px,8vw,39px)}.intro h1 .name-line{gap:10px}.intro h1 .name-contacts{gap:8px}.name-contacts a{width:40px;height:40px}.name-contacts img{width:23px;height:23px}.specialization{margin-top:12px;font-size:13px}.hero-lead{font-size:20px;line-height:1.42}.hero-bottom{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:28px}.hero-metric,.hero-cta{min-height:92px;padding:15px 13px}.hero-metric:nth-child(3){border-top:1px solid rgba(32,35,34,.12)}.hero-cta{border-top:1px solid rgba(32,35,34,.12);font-size:11px}}
+</style>
 <script id="skills-scene-build">
 document.addEventListener('DOMContentLoaded',()=>{
   document.querySelectorAll('.scroll-cue,.chapter').forEach(el=>el.remove());
+  const heroCta=document.querySelector('.hero-cta');if(heroCta)heroCta.textContent='РЕЗУЛЬТАТЫ ПРОЕКТОВ';
   const section=document.querySelector('.skills');
   if(!section)return;
   section.id='competencies';
